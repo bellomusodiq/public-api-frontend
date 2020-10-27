@@ -1,0 +1,36 @@
+.Table {
+    margin: 50px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.TableHeading, .TableBody {
+    display: grid;
+    grid-template-columns: 15% 45% 25% 15%;
+    row-gap: 30px;
+    column-gap: 20px;
+}
+.TableBody {
+    padding: 20px;
+    width: 100%;
+}
+.TableBody:nth-of-type(odd) {
+    background: rgb(211, 211, 211);
+}
+.TableBody:nth-of-type(even) {
+    background: rgb(231, 248, 255);
+}
+.TableBody:hover {
+    opacity: .7;
+}
+button {
+    cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+    .Table {
+        overflow-x: auto;
+    }
+    .TableBody, .TableHeading {
+        width: fit-content;
+        grid-template-columns: 100px 250px 200px 80px;
+    }
+}

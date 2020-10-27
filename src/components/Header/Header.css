@@ -1,0 +1,50 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+    background: #003056;
+    color: #fff;
+    align-items: center;
+    box-shadow: 0 3px 4px lightgray;
+    margin-bottom: 50px;
+}
+.Nav {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+.Nav > * {
+    cursor: pointer;
+}
+.Nav > *:hover {
+    opacity: .6;
+}
+.Menu {
+    display: none;
+}
+@media screen and (max-width: 500px) {
+    .Header {
+        justify-content: space-between;
+        padding: 15px;
+    }
+    .Nav {
+        display: none;
+    }
+    .Menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 40px;
+        width: 40px;
+    }
+    .Logo {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .Menu > div {
+        width: 100%;
+        height: 2px;
+        background: white;
+    }
+}

@@ -1,0 +1,33 @@
+.SideNavMobile {
+    display: none;
+}
+.Backdrop {
+    display: none;
+}
+@media screen and (max-width: 500px) {
+    .SideNavMobile {
+        display: flex;
+        flex-direction: column;
+        width: 70vw;
+        height: 100vh;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        z-index: 101;
+        background: white;
+        padding: 50px 20px;
+        transition: .4s ease all;
+    }
+    .SideNavMobile > a {
+        padding: 10px;
+    }
+    .Backdrop {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.788);
+    }
+}

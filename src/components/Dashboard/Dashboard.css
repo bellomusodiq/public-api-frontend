@@ -1,0 +1,44 @@
+.Dashboard {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+.SideNav {
+    width: 20%;
+    display: flex;
+    height: calc(100vh - 100px);
+    flex-direction: column;
+}
+.SideNavActive, .SideNav > a:hover {
+    background: #003056;
+    color: white!important;
+}
+.SideNav > a {
+    padding: 10px;
+    margin: 10px 0;
+    /* background: #003056; */
+    color: black;
+}
+.DashboardMain {
+    padding-left: 50px;
+    flex: 1;
+}
+.Trade > form {
+    margin: 50px 0;
+}
+.CancelTrade {
+    background: tomato;
+    cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+    .SideNav {
+        display: none;
+    }
+    .Dashboard {
+        width: 95%;
+    }
+    .DashboardMain {
+        width: 100%;
+        padding-left: 0;
+    }
+}

@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Header from './components/Header/Header';
+import Signup from './components/Signup/Signup';
+import { Switch, Route } from "react-router-dom";
+import Login from './components/Login/Login';
+import Dashboard from './components/Dashboard/Dashboard';
+import SideNavMobile from './components/SideNav/SideNavMobile';
+import Backdrop from './components/SideNav/Backdrop';
 
-function App() {
+const App = () => {
+
+  const [showNav, setShowNav] = useState<boolean>(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header openSideNav={() => setShowNav(true)} />
+      <SideNavMobile show={showNav} close={() => setShowNav(false)} />
+      {showNav ? <Backdrop close={() => setShowNav(false)} /> : null}
+      <Switch>
+        <Route path='/signup' component={Signup} />
+        <Route path='/login' component={Login} />
+        <Route path='/dashboard' component={Dashboard} />
+      </Switch>
     </div>
   );
 }

@@ -1,0 +1,14 @@
+.Login {
+    width: 30%;
+    margin: auto;
+}
+a:visited, a:active, a {
+    color: #2196f3;
+    text-decoration: none;
+    cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+    .Login {
+        width: 90%;
+    }
+}
